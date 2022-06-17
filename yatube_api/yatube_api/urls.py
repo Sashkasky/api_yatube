@@ -4,11 +4,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
-from api.views import PostViewSet
+from api.views import PostViewSet, GroupViewSet, CommentViewSet
 
 
 router = routers.DefaultRouter()
 router.register(r'api', PostViewSet)
+router.register(r'api', GroupViewSet)
+router.register(r'api', CommentViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
