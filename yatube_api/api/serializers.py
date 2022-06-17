@@ -17,7 +17,6 @@ class GroupSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    achievement_name = serializers.CharField(source='name')
 
     class Meta:
         model = Comment
